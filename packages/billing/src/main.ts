@@ -9,14 +9,13 @@ async function bootstrap() {
       transport: Transport.KAFKA,
       options: {
         client: {
-          clientId: 'billing',
           brokers: ['localhost:9092'],
         },
         consumer: {
-          groupId: 'billing-consumer'
-        }
-      }
-    }
+          groupId: 'billing-consumer',
+        },
+      },
+    },
   );
   app.listen();
 }
